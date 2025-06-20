@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABM Magic Tools by Amar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 20px 10px;
+            border-radius: 10px;
+        }
+        main {
+            margin-top: 30px;
+        }
+        textarea {
+            width: 90%;
+            max-width: 500px;
+            height: 100px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            resize: none;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            background-color: #4a90e2;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #357ab8;
+        }
+        .output-box {
+            margin-top: 30px;
+            padding: 20px;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        footer {
+            margin-top: 50px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ABM Magic Tools by Amar</h1>
+        <p>Free AI Cartoon Video Generator - Personal Use Only</p>
+    </header>
+    <main>
+        <textarea id="story" placeholder="Enter your story or text here..."></textarea><br>
+        <button onclick="generate()">Generate Cartoon Video</button>
+        <div class="output-box" id="output">
+            <p><strong>Note:</strong> This is a demo. AI generation is not active in this free version.</p>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 ABM Magic Tools by Amar. All rights reserved.
+    </footer>
+
+    <script>
+        function generate() {
+            const story = document.getElementById("story").value.trim();
+            const output = document.getElementById("output");
+            if (story === "") {
+                output.innerHTML = "<p style='color:red;'>Please enter a story or text first.</p>";
+            } else {
+                output.innerHTML = "<p>Generating your AI cartoon video... (Demo only)</p><video width='300' controls><source src='demo-video.mp4' type='video/mp4'>Your browser does not support the video tag.</video>";
+            }
+        }
+    </script>
+</body>
+</html>
